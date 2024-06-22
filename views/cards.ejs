@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" >
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <img src="images/logo.jpg">
+            <p>FastCards</p>
+        </div>
+        <div class="logout">
+            <button class="logout">logout</button>
+        </div>
+    </div>
+    <div class="userArea">
+        <div class="userprofile">
+            <div class="username">
+                <img src="images/profile.jpg"> 
+                <p><%= currentUser %></p>
+            </div>
+            <div class="edit">
+                <img src="images/add.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="folders">
+        <div class="innerfolders">
+            <ul class="list">
+                <% for (let i = 0; i < listofcards.rows.length; i++) { %>
+                <li class="list">
+                        <img src="images/cards.jpg">
+                    <p class="folder"><%= listofcards.rows[i].cardname %></p>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

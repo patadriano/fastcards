@@ -1,0 +1,124 @@
+
+/* color pallete
+pink: #f2bdd6
+dark pink: #f690c6
+blue: #64c5fa
+dark: #5eacde
+
+*/
+
+
+body {
+    display:column;
+    height:100vh;
+}
+.navbar {
+    display:flex;
+    height:8%;
+    background-color: #f2bdd6;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title{
+    flex:10;
+    justify-content: center; 
+    align-items: center;
+}
+.title img{
+    margin: 2%;
+    width:auto;
+    height:20px;
+    float:left;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title p {
+    margin: 2%;
+    color: white;
+}
+.logout{
+    flex:1;
+    justify-content: right; 
+    align-items: center;
+
+}
+
+.navbar button{
+    flex:1;
+    justify-content: center; 
+    align-items: center;
+    height:22px;
+    width: 100px;
+    border-radius:  10px;
+    border:white;
+    color: #f2bdd6;
+}
+
+[src~="images/add.jpg"]{
+    width: auto;
+    height:1.5em;
+    
+}
+
+.userArea{
+    height:25%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.userprofile { 
+    display: flex;   
+    height:7em;
+    width:70em;
+}
+
+.username{
+    display:flex;
+    flex:5;
+    justify-content: left; 
+    align-items: center;
+}
+
+.username img{
+    height:100%;
+}
+.edit{
+    display:flex;
+    flex:1;
+    justify-content: center; 
+    align-items: center;
+}
+.folders{
+    height:63%;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.innerfolders{
+    display: grid;
+    gap: 2%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr 1.5fr;
+    height:25em;
+    width:70em;
+}
+
+.list{
+    display: column; 
+    justify-content: center; 
+    align-items: center;
+    list-style-type: none;
+    flex-direction: column; 
+}
+
+.list img{
+    width:200px;
+    height:auto;
+}
+.list p {
+    text-align: center;
+}
