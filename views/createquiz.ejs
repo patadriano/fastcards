@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css" >
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <img src="images/logo.jpg">
+            <p>FastCards</p>
+        </div>
+        <div class="logout">
+            <button class="logout">logout</button>
+        </div>
+    </div>
+    <form action="/createquiz" method="post">
+        <label for="question">question:  </label><br>
+        <input type="text" id="question" name="question"><br>
+        <label for="answer">answer:  </label><br>
+        <input type="text" id="answer" name="answer"><br>
+        <input type="submit" value="Submit">
+      </form> 
+      <a href="/cards">
+        <button>done</button>
+      </a>
+      
+</body>
+</html>

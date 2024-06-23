@@ -7,7 +7,9 @@ const port = 3000;
 
 let currentUser = "";
 let currentFolder = "";
+let currentFolderId = "";
 let currentCard = "";
+let currentCardId = "";
 
 const db = new pg.Client({
   user: "postgres",
@@ -38,12 +40,21 @@ app.get("/createfolder", (req, res) => {
   res.render("createfolder.ejs");
 });
 
+app.get("/createcard", (req, res) => {
+  res.render("createcard.ejs");
+});
+
 app.get('/cards', async (req, res) => {  
+  if (req.query.foldername){
+
+  
   const foldername = req.query.foldername;
+  currentFolder = foldername;
   console.log("_____________________________________");
   try {
     const folderresult =  await db.query("SELECT * FROM folders WHERE foldername = $1", [foldername]);
     const folders_id = folderresult.rows[0].folders_id;
+    currentFolderId = folders_id;
     //getting foldername using user id to display foldername
     const listofcards =  await db.query("SELECT cardname FROM cards WHERE folder_id = $1", [folders_id]);
     res.render("cards.ejs", { 
@@ -53,7 +64,24 @@ app.get('/cards', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
+}else{
+    try {
+      const folderresult =  await db.query("SELECT * FROM folders WHERE foldername = $1", [currentFolder]);
+      const folders_id = folderresult.rows[0].folders_id;
+      currentFolderId = folders_id;
+      //getting foldername using user id to display foldername
+      const listofcards =  await db.query("SELECT cardname FROM cards WHERE folder_id = $1", [folders_id]);
+      res.render("cards.ejs", { 
+        currentUser:currentUser,
+        listofcards:listofcards
+      });  
+    } catch (err) {
+      console.log(err);
+    }
+  }
 });
+
+
 
 app.get("/logout", (req, res) => {
   res.render("login.ejs");
@@ -143,7 +171,45 @@ app.post("/createfolder", async (req, res) => {
   }
 });
 
-// Ensure the script runs after the DOM is fully loaded
+app.post("/createcard", async (req, res) => {
+  const cardname = req.body.cardname;
+  console.log("entering createcard");
+  console.log("cardname",cardname);
+  currentCard = cardname
+  try {
+    const cardExists = await db.query("SELECT * FROM cards WHERE cardname = $1", [cardname]);
+    if (cardExists.rows.length > 0) {
+      res.send("card name already exists. try another name in.");
+    } else {
+    
+      const addCard = await db.query(
+        "INSERT INTO cards (cardname, folder_id) VALUES ($1, $2)",
+        [cardname, currentFolderId]
+      );
+      res.render("createquiz.ejs");  
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+app.post("/createquiz", async (req, res) => {
+  console.log("entering createquiz");
+  const question = req.body.question;
+  const answer = req.body.answer;
+  try {
+    const cardid = await db.query("SELECT * FROM cards WHERE cardname = $1", [currentCard]);
+    const card_id = cardid.rows[0].cards_id;
+    currentCardId = card_id;
+      const addCard = await db.query(
+        "INSERT INTO qna (question, answer, card_id) VALUES ($1, $2,$3)",
+        [question, answer, currentCardId]
+      );
+      res.render("createquiz.ejs");  
+  } catch (err) {
+    console.log(err);
+  }
+});
 
 
 

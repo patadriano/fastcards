@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" >
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Goblin+One&family=Luckiest+Guy&family=Righteous&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    
+    <div class="navbar">
+        <div class="title">
+            <img src="images/logo.jpg">
+            <p>FastCards</p>
+        </div>
+        <div class="logout">
+            <button class="logout">logout</button>
+        </div>
+    </div>
+    <div class="createfolder">
+        <div class="innercreatefolder">
+        <form action="/createcard" method="post">
+            <p>Create a Card</p>
+            <label for="cardname">cardname:  </label><br>
+            <input class="bar" type="text" id="cardname" name="cardname" ><br>
+            <input class="bar" type="submit" value="Submit">
+        </form> 
+        </div>
+    </div>
 </body>
 </html>

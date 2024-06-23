@@ -35,7 +35,7 @@
     </div>
     <div class="folders">
         <div class="innerfolders">
-            <ul class="list">
+            
                 <% for (let i = 0; i < listoffolder.rows.length; i++) { %>
                 <li class="list">
                     <a href="/cards?foldername=<%= listoffolder.rows[i].foldername %>">
@@ -44,7 +44,7 @@
                     <p class="folder"><%= listoffolder.rows[i].foldername %></p>
                 </li>
                 <% } %>
-            </ul>
+            
         </div>
     </div>
 </body>
