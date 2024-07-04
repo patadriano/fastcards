@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" >
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="images/title-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Goblin+One&family=Luckiest+Guy&family=Righteous&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar">
+        <div class="title">
+            <img src="images/logo.jpg">
+            <p>FastCards</p>
+        </div>
+        <div class="logout">
+            <a href="/logout">
+                <button class="logout">logout</button>
+            </a>
+        </div>
+    </div>
+    <div class="createfolder-quiz">
+        <div class="innercreatefolder-quiz1">
+            <div class="bobo">
+                <p style="font-size: 30px;">Q</p>
+                <p><%= question %></p>
+            </div>
+        </div>
+        <div class="innercreatefolder-quiz2">
+            <form action="/playquiz" method="post">
+            <input class="bar-quiz" type="text" id="quizanswer" name="quizanswer" ><br>
+            <input class="bar" type="submit" value="Submit">
+        </form> 
+        </div>
+        
+        
+    </div>
+</body>
+</html>

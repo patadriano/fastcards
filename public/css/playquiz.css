@@ -1,0 +1,77 @@
+
+/* color pallete
+pink: #f2bdd6
+dark pink: #f690c6
+blue: #64c5fa
+dark: #5eacde
+grey: #f1f1f1
+*/
+
+.calistoga-regular {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .sintony-regular {
+    font-family: "Sintony", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    display:column;
+    height:100vh;
+}
+.navbar {
+    display:flex;
+    height:8%;
+    background-color: #f2bdd6;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title{
+    flex:10;
+    justify-content: center; 
+    align-items: center;
+}
+.title p{
+    font-family: "Sintony", sans-serif;
+}
+.title img{
+    margin: 2%;
+    width:auto;
+    height:20px;
+    float:left;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title p {
+    margin: 2%;
+    color: white;
+}
+
+.logout{
+    flex:1;
+    justify-content: right; 
+    align-items: center;
+    cursor: pointer;
+    
+
+}
+
+.logout button{
+    background-color: white;
+}
+
+.navbar button{
+    flex:1;
+    justify-content: center; 
+    align-items: center;
+    height:22px;
+    width: 100px;
+    border-radius:  10px;
+    border:white;
+    color: #f2bdd6;
+}

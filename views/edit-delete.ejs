@@ -25,10 +25,14 @@
     </div>
     <div class="createfolder">
         <div class="innercreatefolder">
-        <form action="/createcard" method="post">
-            <p>Create a Card</p>
-            <label for="cardname">cardname:  </label><br>
-            <input class="bar" type="text" id="cardname" name="cardname" ><br>
+        <form action="/editdeletefolders" method="post">
+            <p>Change Folder Name or Delete Folder</p>
+            <label for="edit">original foldername:  </label><br>
+            <input class="bar" type="text" id="origfoldername" name="origfoldername" ><br>
+            <label for="edit">new foldername:  </label><br>
+            <input class="bar" type="text" id="newfoldername" name="newfoldername" ><br>
+            <label for="delete">delete:  </label><br>
+            <input class="bar" type="text" id="delete" name="delete" ><br>
             <input class="bar" type="submit" value="Submit">
         </form> 
         </div>

@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" >
-    <title>Document</title>
+    <title>Your Flashcards</title>
+    <link rel="icon" type="image/x-icon" href="images/title-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Sintony:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="navbar">
@@ -13,7 +17,10 @@
             <p>FastCards</p>
         </div>
         <div class="logout">
-            <button class="logout">logout</button>
+
+            <a href="/logout">
+                <button class="logout">logout</button>
+            </a>
         </div>
     </div>
     <div class="userArea">
@@ -23,6 +30,9 @@
                 <p><%= currentUser %></p>
             </div>
             <div class="edit">
+                <a href="/editdeletecards">
+                    <img src="images/edit.jpg" >
+                </a>
                 <a href="/createcard">
                     <img src="images/add.jpg" >
                 </a>
@@ -31,15 +41,26 @@
     </div>
     <div class="folders">
         <div class="innerfolders">
-            <ul class="list">
+            
                 <% for (let i = 0; i < listofcards.rows.length; i++) { %>
                 <li class="list">
-                        <img src="images/cards.jpg">
+                    <a href="/playquiz?cardname=<%= listofcards.rows[i].cardname %>">
+                         <img src="images/card-pink.png" onmouseover="hover(this);" onmouseout="unhover(this);">
+                    </a>
                     <p class="folder"><%= listofcards.rows[i].cardname %></p>
                 </li>
                 <% } %>
-            </ul>
+    
         </div>
     </div>
 </body>
+<script>
+    function hover(element) {
+      element.setAttribute('src', 'images/card-blue.png');
+    }
+    
+    function unhover(element) {
+      element.setAttribute('src', 'images/card-pink.png');
+    }
+    </script>
 </html>

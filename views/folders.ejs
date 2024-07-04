@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" >
-    <title>Document</title>
+    <title>Your Folders</title>
+    <link rel="icon" type="image/x-icon" href="images/title-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Sintony:wght@400;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <div class="navbar">
         <div class="title">
-            <img src=".images/logo.jpg">
+            <img src="images/logo.jpg">
             <p>FastCards</p>
         </div>
         <div class="logout">
-
             <a href="/logout">
                 <button class="logout">logout</button>
             </a>
-            
         </div>
     </div>
     <div class="userArea">
@@ -27,6 +29,9 @@
                 <p><%= currentUser %></p>
             </div>
             <div class="edit">
+                <a href="/editdeletefolders">
+                    <img src="images/edit.jpg" >
+                </a>
                 <a href="/createfolder">
                     <img src="images/add.jpg" >
                 </a>
@@ -39,7 +44,7 @@
                 <% for (let i = 0; i < listoffolder.rows.length; i++) { %>
                 <li class="list">
                     <a href="/cards?foldername=<%= listoffolder.rows[i].foldername %>">
-                        <img src="images/folder.jpg">
+                        <img  class="imgfolder" src="images/folder.jpg" onmouseover="hover(this);" onmouseout="unhover(this);">
                     </a>
                     <p class="folder"><%= listoffolder.rows[i].foldername %></p>
                 </li>
@@ -49,6 +54,12 @@
     </div>
 </body>
 <script>
+function hover(element) {
+  element.setAttribute('src', 'images/removed-folder-blue.png');
+}
 
+function unhover(element) {
+  element.setAttribute('src', 'images/folder.jpg');
+}
 </script>
 </html>

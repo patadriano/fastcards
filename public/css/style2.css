@@ -4,11 +4,16 @@ pink: #f2bdd6
 dark pink: #f690c6
 blue: #64c5fa
 dark: #5eacde
-
+grey: #f1f1f1
 */
 
 .calistoga-regular {
     font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .sintony-regular {
+    font-family: "Sintony", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
@@ -30,6 +35,9 @@ body {
     justify-content: center; 
     align-items: center;
 }
+.title p{
+    font-family: "Sintony", sans-serif;
+}
 .title img{
     margin: 2%;
     width:auto;
@@ -43,11 +51,18 @@ body {
     margin: 2%;
     color: white;
 }
+
 .logout{
     flex:1;
     justify-content: right; 
     align-items: center;
+    cursor: pointer;
+    
 
+}
+
+.logout button{
+    background-color: white;
 }
 
 .navbar button{
@@ -61,18 +76,7 @@ body {
     color: #f2bdd6;
 }
 
-.createfolder{
-    display:flex;
-    height:100%;
-    justify-content: center; 
-    align-items: center;
-}
-.innercreatefolder{
-    display:column;
-    background-color: #f2bdd6 ;
-    padding:5% 10% 5% 10%; 
-    border-radius:  30px; 
-}
+
 
 input[type="submit"], .submit{
     height:28px;
@@ -88,30 +92,28 @@ input[type="submit"], .submit{
 }
 
 label{
-    font-size: 16px;
+    font-size: 30px;
     color:white;
-    font-family: "Sintony", sans-serif;
-}
-
-.bar{
-    height:2.5em;
-    width: 35em;
-    border-radius:  30px;
-    margin:1em 0 2.4em 0 ;
-    border:white;
-    color: #f2bdd6;
-}
-input{
-    padding-left:1%;
-}
-
-.innercreatefolder p{
     font-family: "Calistoga", serif;
-    text-align: center;
-    font-size: 3em;
-    color:white;
-    margin-bottom:15%;
 }
+
+
+textarea{
+    text-indent: 10px;
+    font-family: "Sintony", sans-serif;
+    font-size: 16px;
+    width: 100%;
+    height:40%;
+    padding: 10px;
+    outline: #f690c6;
+    border: 1px solid white;
+    border-radius: 20px;
+    resize: none; 
+    color: #f2bdd6;
+    margin:5% 0 13% 0;
+}
+  
+    
 
 
 
@@ -130,29 +132,43 @@ input{
 
 }
 .innerqna{
-    display:flex;
+    display:column;
     justify-content: center; 
     align-items: center;
-    background-color: pink;
-    width: 46em;
-    height:45em;
+    background-color: #f2bdd6;
+    width: 86%;
+    height:86%;
     border-radius: 25px;
+    position: relative;
 }
-.label{
-    font-family: "Calistoga", serif;
-    font-size: 23px;
+.innerqnaa{
+    display:column;
+    justify-content: center; 
+    align-items: center;
+    background-color: #f1f1f1;
+    width: 86%;
+    height:86%;
+    border-radius: 25px;
+    position: relative;
 }
-
-.input{
-    margin:5% 0 13% 0 ;
-    height:12em;
-    width:40em;
-    border-radius:  20px;
-    border:white;
-    color: #f2bdd6;
+.button{
+    position: absolute;
+    right:1em;
+    bottom: 1em;
 }
 .displayedqna{
     background-color: yellow;
     display:column;
     width:50%;
+}
+
+form{
+    margin:10%  15% 10% 15%;
+}
+
+.quesans{
+    color:#A29999;
+    font-family: "Sintony", sans-serif;
+    margin: 5%;
+
 }

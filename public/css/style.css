@@ -7,10 +7,17 @@ dark: #5eacde
 
 */
 
-
+.sintony-regular {
+    font-family: "Sintony", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 body {
     display:column;
     height:100vh;
+}
+p{
+    font-family: "Sintony", sans-serif;
 }
 .navbar {
     display:flex;
@@ -42,7 +49,13 @@ body {
     flex:1;
     justify-content: right; 
     align-items: center;
+    cursor: pointer;
+    
 
+}
+
+.logout button{
+    background-color: white;
 }
 
 .navbar button{
@@ -59,9 +72,17 @@ body {
 [src~="images/add.jpg"]{
     width: auto;
     height:1.5em;
+    margin-left:20px;
+    
+
     
 }
-
+[src~="images/edit.jpg"]{
+    width: auto;
+    height:1.5em;
+    margin-left:100px;
+    
+}
 .userArea{
     height:25%;
     display: flex; 
@@ -85,6 +106,10 @@ body {
 .username img{
     height:100%;
 }
+.username p{
+    margin-left: 2em;
+    font-size: 1em;
+}
 .edit{
     display:flex;
     flex:1;
@@ -100,13 +125,18 @@ body {
 
 .innerfolders{
     display: grid;
-    gap: 2%;
+    gap: 5% 9.6%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1.5fr 1.5fr;
     height:25em;
     width:70em;
 }
-
+.innerfolders p{
+    font-size: 0.89rem;
+}
+.imgfolder:hover{
+    content: url('images/removed-folder-blue.png');
+}
 .list{
     display: column; 
     justify-content: center; 
@@ -168,10 +198,51 @@ input{
     padding-left:1%;
 }
 
+input[type=text]{
+    text-indent:15px;
+} 
+*:focus {
+    outline: #f690c6;
+    border: solid #f690c6 3px ;
+}
+
 .innercreatefolder p{
-    font-family: "Calistoga", serif;
+    font-family: "Sintony", sans-serif;
     text-align: center;
+    
     font-size: 3em;
     color:white;
     margin-bottom:15%;
 }
+.bar-quiz{
+    border:none;
+    border-bottom: 2px solid black; /* Apply bottom border only */
+    width:35em;
+}   
+.createfolder-quiz{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally */
+    justify-content: center; 
+    height:92%;
+}
+
+.innercreatefolder-quiz1{
+    background-color: #f2bdd6;
+    margin:10%;
+    color:white;
+    border-radius:  30px; 
+    width:80%;
+    height:50%;
+}
+.bobo{
+    margin:5%;
+}
+.innercreatefolder-quiz2{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally */
+    justify-content: center;
+    width:100%;
+    height:50%;
+    }
