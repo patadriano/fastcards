@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/editdelete.css" >
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="images/title-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <div class="navbar">
         <div class="title">
             <img src="images/logo.jpg">
-            <p>FastCards</p>
+            <p><strong>FastCards</strong></p>
         </div>
         <div class="logout">
             <a href="/logout">
@@ -23,10 +23,13 @@
             </a>
         </div>
     </div>
-    <div class="createfolder">
-        <div class="innercreatefolder">
+    <div class="create">
+        <div class="innercreate">
         <form action="/editdeletecards" method="post">
-            <p>Change Folder Name or Delete Card</p>
+            <img src="images/logo.jpg">
+            <p><strong>
+                Rename or Delete Card
+            </strong></p>
             <label for="edit">original cardame:  </label><br>
             <input class="bar" type="text" id="origcardname" name="origcardname" ><br>
             <label for="edit">new cardname:  </label><br>

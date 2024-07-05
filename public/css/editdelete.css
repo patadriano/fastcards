@@ -78,100 +78,64 @@ body {
     color: #f2bdd6;
 }
 
+.create{
+    height: 92%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
 
+.innercreate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
 
-input[type="submit"], .submit{
+    background-color: #f2bdd6;
+    border-radius: 20px;
+    height:80%;
+    width:40%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    color:white;
+}
+
+form  label{
+    font-family: "Sintony", sans-serif;
+   text-align: left;
+}
+form img{
+    height: 5em;
+
+}
+form p{
+    font-size: 2rem;
+    font-family: "Sintony", sans-serif;
+}
+
+input[type="text"]{
+    border-radius:  15px;
+    border: white;
+    color: #f690c6;
+    height:1.5rem;
+    width: 100%;
+    outline:none;
+    text-align: center;
+}
+input[type="submit"]{
     height:28px;
     width: 120px;
     border-radius:  15px;
     background-color:white;
-    margin-left: 12em;
     border:white;
     color: #f690c6;
     font-weight: bold; 
     cursor: pointer;
     font-family: "Sintony", sans-serif;
-}
-
-label{
-    font-size: 30px;
-    color:white;
-    font-family: "Calistoga", serif;
-}
-
-
-textarea{
-    text-indent: 10px;
-    font-family: "Sintony", sans-serif;
-    font-size: 16px;
-    width: 100%;
-    height:40%;
-    padding: 10px;
-    outline: #f690c6;
-    border: 1px solid white;
-    border-radius: 20px;
-    resize: none; 
-    color: #f2bdd6;
-    margin:5% 0 13% 0;
-}
-  
-    
-
-
-
-
-
-.createquizarea{
-    height:92%;
-    display:flex;
-}
-.qna{
-    display:flex;
-    justify-content: center; 
-    align-items: center;
-    width:50%;
-    height:100%;
-
-}
-.innerqna{
-    display:column;
-    justify-content: center; 
-    align-items: center;
-    background-color: #f2bdd6;
-    width: 86%;
-    height:86%;
-    border-radius: 25px;
-    position: relative;
-}
-.innerqnaa{
-    display:column;
-    justify-content: center; 
-    align-items: center;
-    background-color: #f1f1f1;
-    width: 86%;
-    height:86%;
-    border-radius: 25px;
-    position: relative;
-    overflow-y: auto;
-}
-.button{
-    position: absolute;
-    right:1em;
-    bottom: 1em;
-}
-.displayedqna{
-    background-color: yellow;
-    display:column;
-    width:50%;
-}
-
-form{
-    margin:10%  15% 10% 15%;
-}
-
-.quesans{
-    color:#A29999;
-    font-family: "Sintony", sans-serif;
-    margin: 5%;
 
 }

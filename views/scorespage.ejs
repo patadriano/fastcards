@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/score.css" >
     <title>Document</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,7 @@
     <div class="navbar">
         <div class="title">
             <img src="images/logo.jpg">
-            <p>FastCards</p>
+            <p><strong>FastCards</strong></p>
         </div>
         <div class="logout">
             <a href="/logout">
@@ -22,18 +22,27 @@
             </a>
         </div>
     </div>
-    <div class="createfolder">
-        <div class="innercreatefolder">
-            <p>score: <%= score %></p>
-            <% for (let i = 0; i < questions.length; i++) { %>
-                <p>Question: <%= questions[i] %></p>
-                <p>Answer: <%= answers[i] %></p>
-                <p>Result: <%= checking[i] %></p>
-            <% } %>
-            
-            <a href="/score">
-                <button class="logout">done</button>
-            </a>
+    <div class="summaryarea">
+        <div class="score">
+            <img src="images/logo1.jpg">
+            <strong><p> <%= score %>/<%= questions.length %></p></strong>
+        </div>
+        <div class="summary">
+            <div class="summary1">
+                <% for (let i = 0; i < questions.length; i++) { %>
+                    <%if (checking[i] == "correct"){%>
+                        <p style="color:#92D686;"><strong>Question <%= i+1%>:</strong> <%= questions[i] %></p>
+                        <p style="color:#92D686;"><strong>Answer <%= i+1%>: </strong><%= answers[i] %></p>
+                    <%}else{%>
+                        <p><strong>Question <%= i+1%>: </strong><%= questions[i] %></p>
+                         <p><strong>Answer <%= i+1%>:</strong> <%= answers[i] %></p>
+                   <% }%>  
+                   <br>
+                <% } %>
+            </div>
+            <div class="summary2">
+                <a href="/score" ><button class="donebutton">done</button></a>
+            </div>
         </div>
     </div>
 </body>

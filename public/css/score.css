@@ -1,0 +1,161 @@
+
+/* color pallete
+pink: #f2bdd6
+dark pink: #f690c6
+blue: #64c5fa
+dark: #5eacde
+green:#92D686
+*/
+
+.sintony-regular {
+    font-family: "Sintony", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+body {
+    display:column;
+    height:100vh;
+   
+}
+p{
+    font-family: "Sintony", sans-serif;
+}
+.navbar {
+    display:flex;
+    height:8%;
+    background-color: #f2bdd6;
+    justify-content: center; 
+    align-items: center;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+.title{
+    flex:10;
+    justify-content: center; 
+    align-items: center;
+}
+.title img{
+    margin: 2%;
+    width:auto;
+    height:20px;
+    float:left;
+    justify-content: center; 
+    align-items: center;
+}
+
+.title p {
+    margin: 2%;
+    color: white;
+}
+.logout{
+    flex:1;
+    justify-content: right; 
+    align-items: center;
+    cursor: pointer;
+    
+
+}
+
+.logout button{
+    background-color: white;
+}
+
+.navbar button{
+    flex:1;
+    justify-content: center; 
+    align-items: center;
+    height:22px;
+    width: 100px;
+    border-radius:  10px;
+    border:white;
+    color: #f2bdd6;
+}
+.summaryarea{
+    height:92%;
+    width:100%;
+    display: flex;
+    
+}
+.score{
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally */
+    justify-content: center; 
+    height:100%;
+    width:40%;
+
+}
+.score img{
+    width:13.5em;
+    height:auto;
+}
+.score p{
+    color: #f690c6;
+    font-size: 5em;
+    margin:4%;
+}
+.summary{
+    height:100%;
+    width:60%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Center items horizontally */
+    justify-content: center; 
+}
+.summary1{
+    height:70%;
+    width:85%;
+    top:5%;
+    right:5%;
+    overflow-y: auto;
+    
+}
+.summary1 p{
+    color:#f690c6;
+    font-size: 1.25em;
+    
+    
+}
+.summary2{
+    position: relative;
+    height:5%;
+    width:85%;
+}
+ .summary2 button{
+    position: absolute;
+    bottom: 0; 
+    right: 0; 
+    height:28px;
+    width: 120px;
+    border-radius:  15px;
+    background-color:#f690c6;
+    border:#f690c6;
+    color: white;
+    font-weight: bold; 
+    cursor: pointer;
+    font-family: "Sintony", sans-serif;
+
+ }
+
+ .summary2 button:hover{
+    background-color:#E673B0;
+ }
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #f2bdd6;
+    border-radius: 16px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #f2bdd6;
+}

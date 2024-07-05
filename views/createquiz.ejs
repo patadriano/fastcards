@@ -18,7 +18,7 @@
     <div class="navbar">
         <div class="title">
             <img src="images/logo.jpg">
-            <p>FastCards</p>
+            <p><strong>FastCards</strong></p>
         </div>
         <div class="logout">
             <a href="/logout">
@@ -30,7 +30,7 @@
         <div class="qna">
             <div class="innerqna">
                 <form action="/createquiz" method="post">
-                    <label class="label" for="question">Q </label><br>
+                    <label class="label" for="question"><strong></strong>Q </label><br>
                     <textarea id="question" name="question" rows="4" cols="50"></textarea><br>
                     <label class="label" for="answer">A  </label><br>
                     <textarea  id="answer" name="answer"rows="4" cols="50"></textarea><br>
@@ -46,9 +46,9 @@
                 <% if (listofqna && listofqna.rows) { %>
                     <% for (let i = 0; i < listofqna.rows.length; i++) { %>
                         <div class="quesans">
-                            Question <%= i + 1 %>: <%= listofqna.rows[i].question %>
+                            <strong>Question <%= i + 1 %>:</strong> <%= listofqna.rows[i].question %>
                             <br>
-                            Answer <%= i + 1 %>: <%= listofqna.rows[i].answer %>
+                            <strong>Answer <%= i + 1 %>:</strong> <%= listofqna.rows[i].answer %>
                             <br>
                         </div>
                       

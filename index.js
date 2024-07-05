@@ -128,6 +128,10 @@ app.get('/cards', async (req, res) => {
 
 app.get("/score",  async (req, res) => {
   console.log("Entering Card Page - get '/score' ");
+  score = 0;
+  questions = [];
+answers = [];
+checking = [];
   const listofcards =  await db.query("SELECT cardname FROM cards WHERE folder_id = $1", [currentFolderId]);
   res.render("cards.ejs", {currentUser:currentUser, listofcards:listofcards});
 });
@@ -301,10 +305,11 @@ app.post("/playquiz", async (req, res) => {
     if (i < noOfRows){
       res.render("playquiz.ejs",{
         question: qnaresult.rows[i].question
-      });
+      });9
     }else{
       i = 0;
       res.render("scorespage.ejs", {questions:questions,answers:answers,checking:checking, score:score});
+      
     }
   } catch (err) {
     console.log(err);

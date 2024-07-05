@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/playquiz.css" >
     <title>Document</title>
     <link rel="icon" type="image/x-icon" href="images/title-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <div class="navbar">
         <div class="title">
             <img src="images/logo.jpg">
-            <p>FastCards</p>
+            <p><strong>FastCards</strong></p>
         </div>
         <div class="logout">
             <a href="/logout">
@@ -23,18 +23,24 @@
             </a>
         </div>
     </div>
-    <div class="createfolder-quiz">
-        <div class="innercreatefolder-quiz1">
-            <div class="bobo">
-                <p style="font-size: 30px;">Q</p>
-                <p><%= question %></p>
+    <div class="playquiz">
+        <div class="questionarea">
+            <div class="question">
+                <div class="img-ques">
+                     <img src="images/logo.jpg">
+                     <p><strong>Question: </strong></p>     
+                </div>
+                <div class="centerques">
+                    <p><%= question %></p>
+                </div>
+                
             </div>
         </div>
-        <div class="innercreatefolder-quiz2">
+        <div class="answerarea">
             <form action="/playquiz" method="post">
-            <input class="bar-quiz" type="text" id="quizanswer" name="quizanswer" ><br>
-            <input class="bar" type="submit" value="Submit">
-        </form> 
+            <input type="text" id="quizanswer" name="quizanswer" ><br>
+            <strong><input type="submit" value="submit"></strong>
+            </form> 
         </div>
         
         
